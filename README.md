@@ -49,12 +49,12 @@ The second assignment which is the React webapp is a simple shopping cart applic
 
 # To run Assingment 1 
 
-## Option 1: Open directly in browser
+### Option 1: Open directly in browser
 
 1. Open the folder named Assingment_1 when you will find the "index.html" file.
 2. Double-click it, and your default web browser (Chrome, Firefox, etc.) will open it.
 
-## Option 2: Run Using a Simple HTTP Server
+### Option 2: Run Using a Simple HTTP Server
 
 1. Navigate to the project folder Assignment 1 in your terminal/command prompt.
 2. Run a Python HTTP server
