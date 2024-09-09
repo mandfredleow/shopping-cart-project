@@ -2,8 +2,8 @@
 
 ## Project Overview
 This project contains two assignments.
-The first assignment is a static webpage that follows the give design found in "public/images/design.png".
-The second assignment which is the React webapp is a simple shopping cart application built with React and TypeScript. It allows users to browse products, add them to a cart, and manage their cart contents.
+- The first assignment is a static webpage that follows the give design found in "public/images/design.png".
+- The second assignment which is the React webapp is a simple shopping cart application built with React and TypeScript. It allows users to browse products, add them to a cart, and manage their cart contents.
     - Product details are drawn from 'https://fakestoreapi.com'
 
 ## Key Technical Decisions
@@ -25,7 +25,7 @@ The second assignment which is the React webapp is a simple shopping cart applic
 - **Reasoning**: For this project's scope, a lightweight solution was preferred over heavier libraries. The custom hook encapsulates fetching logic, promoting reusability and separation of concerns.
 
 ### 5. Responsive Design
-- **Decision**: Implemented responsive design using CSS media queries and flexbox.
+- **Decision**: Implemented responsive design using flexbox.
 - **Reasoning**: This ensures the application is usable across various device sizes without relying on additional libraries, keeping the bundle size small.
 
 ## Assumptions
