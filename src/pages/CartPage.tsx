@@ -127,7 +127,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                     {/* Cart Items */}
                     <div className="md:col-span-2">
                         {products.map((item) => (
-                            <div key={`${item.id}-${item.size || ''}`} className="flex items-center border-b py-4">
+                            <div key={`${item.id}-${item.size || ''}`} className="flex items-center border-b py-4" data-testid="cart-item">
                                 <Link to={`/products/${item.id}`} className="flex items-start flex-grow">
                                     <img src={item.image} alt={item.name} className="w-24 h-24 object-contain rounded-md" />
                                     <div className="ml-4 flex-grow">
@@ -149,6 +149,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                                         updateQuantity(item.id, item.size, item.quantity - 1);
                                                     }}
                                                     disabled={item.quantity <= 1}
+                                                    aria-label="Decrease quantity"
                                                 >
                                                     <Minus className="w-4 h-4" />
                                                 </Button>
@@ -170,6 +171,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                                         e.stopPropagation();
                                                     }}
                                                     className="w-12 text-center"
+                                                    data-testid="item-quantity"
                                                 />
                                                 <Button
                                                     variant="text"
@@ -178,6 +180,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                                         e.preventDefault();
                                                         updateQuantity(item.id, item.size, item.quantity + 1);
                                                     }}
+                                                    aria-label="Increase quantity"
                                                 >
                                                     <Plus className="w-4 h-4" />
                                                 </Button>
@@ -191,6 +194,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                         size="small"
                                         onClick={() => removeItem(item.id, item.size)}
                                         className="bg-red-500 hover:bg-red-600 text-white"
+                                        aria-label="Remove item"
                                     >
                                         <X className="w-4 h-4" />
                                     </Button>
