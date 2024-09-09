@@ -99,21 +99,22 @@ const HomePage: React.FC = () => {
   return (
     <div id="root" className="min-h-screen flex flex-col">
       <main className="flex-grow">
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900">All Products</h1>
-            <div className="flex space-x-4">
-              {/* Search Bar */}
-              <TextField
-                label="Search Products"
-                variant="outlined"
-                size="small"
-                value={searchTerm}
-                onChange={(e) => handleSearch(e.target.value)}
-              />
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">All Products</h1>
+          <div className="flex flex-col gap-4 mb-6">
+            {/* Search Bar */}
+            <TextField
+              label="Search Products"
+              variant="outlined"
+              size="small"
+              value={searchTerm}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="w-full"
+            />
 
+            <div className="flex flex-col sm:flex-row gap-4">
               {/* Filter Button */}
-              <FormControl variant="outlined" size="small" style={{ width: '200px' }}>
+              <FormControl variant="outlined" size="small" className="w-full sm:w-1/2">
                 <InputLabel id="filter-label">Category</InputLabel>
                 <Select
                   labelId="filter-label"
@@ -131,7 +132,7 @@ const HomePage: React.FC = () => {
               </FormControl>
 
               {/* Sort Button */}
-              <FormControl variant="outlined" size="small" style={{ width: '200px' }}>
+              <FormControl variant="outlined" size="small" className="w-full sm:w-1/2">
                 <InputLabel id="sort-label">Sort by</InputLabel>
                 <Select
                   labelId="sort-label"
@@ -150,21 +151,15 @@ const HomePage: React.FC = () => {
           </div>
                 
           {/* Product Section */}
-          {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onClick={() => navigate(`/products/${product.id}`)}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-10">
-              <p className="text-xl text-gray-600">No products found</p>
-            </div>
-          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onClick={() => navigate(`/products/${product.id}`)}
+              />
+            ))}
+          </div>
         </div>
       </main>
 

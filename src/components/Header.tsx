@@ -13,15 +13,15 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
-          <div className="flex lg:w-0 lg:flex-1">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex-1">
             <a href="/" className="flex items-center space-x-3 text-gray-800 transition-colors duration-300">
               <Store className="h-8 w-8" />
               <span className="text-2xl font-bold">StyleStore</span>
             </a>
           </div>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0" onClick={() => navigate('/cart')}> 
-            <Button variant="contained" className="ml-4 relative" aria-label={`Shopping cart with ${cartCount} items`}>
+          <div className="flex items-center" onClick={() => navigate('/cart')}>
+            <Button variant="contained" className="relative" aria-label={`Shopping cart with ${cartCount} items`}>
               <ShoppingCart className="h-6 w-6" />
               {cartCount > 0 && (
                 <Badge badgeContent={cartCount} color="error" className="absolute -top-2 -right-2">

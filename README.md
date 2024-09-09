@@ -1,3 +1,76 @@
+# Technical Decisions and Assumptions
+
+## Project Overview
+This project contains two assignments.
+The first assignment is a static webpage that follows the give design found in "public/images/design.png".
+The second assignment which is the React webapp is a simple shopping cart application built with React and TypeScript. It allows users to browse products, add them to a cart, and manage their cart contents.
+
+## Key Technical Decisions
+
+### 1. React with TypeScript
+- **Decision**: Used React with TypeScript for the frontend.
+- **Reasoning**: TypeScript provides static typing, enhancing code quality and developer productivity. It catches potential errors early in the development process and improves code maintainability.
+
+### 2. State Management: React Context API
+- **Decision**: Utilized React's Context API for state management over other state management libraries.
+- **Reasoning**: For a relatively small-scale application like this shopping cart, the Context API provides sufficient state management capabilities without the overhead of additional libraries. It simplifies the codebase and reduces bundle size.
+
+### 3. Styling: CSS Modules
+- **Decision**: Employed CSS Modules for styling components.
+- **Reasoning**: CSS Modules provide local scoping for styles, preventing global namespace conflicts. This approach enhances modularity and makes the styles more maintainable compared to global CSS or inline styles.
+
+### 4. Data Fetching: Custom Hook with Fetch API
+- **Decision**: Created a custom hook using the native Fetch API for data fetching.
+- **Reasoning**: For this project's scope, a lightweight solution was preferred over heavier libraries. The custom hook encapsulates fetching logic, promoting reusability and separation of concerns.
+
+### 5. Responsive Design
+- **Decision**: Implemented responsive design using CSS media queries and flexbox.
+- **Reasoning**: This ensures the application is usable across various device sizes without relying on additional libraries, keeping the bundle size small.
+
+## Assumptions
+
+1. **API Stability**: Assumed the provided API endpoints are stable and follow the documented structure.
+2. **Browser Support**: Developed with modern browsers in mind, assuming users have up-to-date browsers that support ES6+ features.
+3. **Performance**: Assumed the product list wouldn't grow to a size that would cause performance issues with the current implementation.
+4. **User Authentication**: The current implementation doesn't include user authentication, assuming it's not required for this phase of the project.
+5. **Static Webapge**: Assumed for assignment 1 that it's a static webpage without any dynamic content or functionality.
+
+## Future Considerations
+
+1. Implement data persistence for the shopping cart using local storage or a backend service. 
+2. User authentication and authorization.
+3. Add unit and integration tests to ensure reliability as the application grows.
+4. Evaluate the need for a more robust state management solution if the application's complexity increases significantly.
+
+# To run Assingment 1 
+
+## Option 1: Open directly in browser
+
+1. Open the folder named Assingment_1 when you will find the "index.html" file.
+2. Double-click it, and your default web browser (Chrome, Firefox, etc.) will open it.
+
+## Option 2: Run Using a Simple HTTP Server
+
+1. Navigate to the project folder Assignment 1 in your terminal/command prompt.
+2. Run a Python HTTP server
+    ```
+    python -m http.server
+    ```
+3. Open your web browser and navigate to `http://localhost:8000` to see the application.
+
+# To run Assingment 2 
+
+1. Open a terminal or command prompt
+2. Navigate to the project directory (where the package.json file is located)
+3. Run npm install to install all the project dependencies
+4. After the installation is complete, run npm start to start the development server
+So the commands would be:
+```
+cd SHOPPING-CART-PROJECT
+npm install
+npm start
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
