@@ -4,6 +4,7 @@
 This project contains two assignments.
 The first assignment is a static webpage that follows the give design found in "public/images/design.png".
 The second assignment which is the React webapp is a simple shopping cart application built with React and TypeScript. It allows users to browse products, add them to a cart, and manage their cart contents.
+    - Product details are drawn from 'https://fakestoreapi.com'
 
 ## Key Technical Decisions
 
@@ -34,6 +35,10 @@ The second assignment which is the React webapp is a simple shopping cart applic
 3. **Performance**: Assumed the product list wouldn't grow to a size that would cause performance issues with the current implementation.
 4. **User Authentication**: The current implementation doesn't include user authentication, assuming it's not required for this phase of the project.
 5. **Static Webapge**: Assumed for assignment 1 that it's a static webpage without any dynamic content or functionality.
+6. **Product Information**: 
+    - Products are splited into three categories: "Clothing (Men's and Women's)", "Jewelery", and "Electronics".
+    - Products' details and specifications are similar for each product in the same category.
+    - Only Clothing and Jewelery have "size" property.
 
 ## Future Considerations
 

@@ -23,6 +23,7 @@ interface CartPageProps {
 export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
     const [products, setProducts] = useState<CartItem[]>([]);
     const [loading, setLoading] = useState(true);
+    const [editingQuantity, setEditingQuantity] = useState<{ id: number; size?: string; value: string } | null>(null);
     const navigate = useNavigate();
 
     // Fetch product details
@@ -78,6 +79,21 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
             delete updatedItems[key];
             return updatedItems;
         });
+    };
+
+    const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>, id: number, size?: string) => {
+        const newValue = e.target.value;
+        setEditingQuantity({ id, size, value: newValue });
+    };
+
+    const finalizeQuantity = (id: number, size?: string) => {
+        if (editingQuantity && editingQuantity.id === id && editingQuantity.size === size) {
+            const newQuantity = parseInt(editingQuantity.value, 10);
+            if (!isNaN(newQuantity) && newQuantity > 0) {
+                updateQuantity(id, size, newQuantity);
+            }
+            setEditingQuantity(null);
+        }
     };
 
     const subtotal = products.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -139,12 +155,15 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                                 <input
                                                     id={`quantity-${item.id}`}
                                                     min="1"
-                                                    value={item.quantity}
-                                                    onChange={(e) => {
-                                                        e.preventDefault();
-                                                        e.stopPropagation();
-                                                        const newQuantity = parseInt(e.target.value) || 1;
-                                                        updateQuantity(item.id, item.size, newQuantity);
+                                                    value={editingQuantity && editingQuantity.id === item.id && editingQuantity.size === item.size
+                                                        ? editingQuantity.value
+                                                        : item.quantity}
+                                                    onChange={(e) => handleQuantityChange(e, item.id, item.size)}
+                                                    onBlur={() => finalizeQuantity(item.id, item.size)}
+                                                    onKeyDown={(e) => {
+                                                        if (e.key === 'Enter') {
+                                                            finalizeQuantity(item.id, item.size);
+                                                        }
                                                     }}
                                                     onClick={(e) => {
                                                         e.preventDefault();
