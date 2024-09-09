@@ -75,6 +75,17 @@ cd SHOPPING-CART-PROJECT
 npm install
 npm start
 ```
+# To run the tests
+
+1. Open a terminal or command prompt
+2. Navigate to the project directory (where the package.json file is located)
+3. Run npm test to run the tests
+So the commands would be:
+```
+cd SHOPPING-CART-PROJECT
+npm test
+```
+
 
 # Getting Started with Create React App
 
