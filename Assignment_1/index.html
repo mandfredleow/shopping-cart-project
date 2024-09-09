@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../public/apple_logo.png" alt="Logo" />
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search" placeholder="Search for .." />
+        </div>
+        <div class="user-profile">
+            <img src="../public/user_profile.jpg" alt="Analyst User" />
+            <span>Analyst User</span>
+        </div>
+    </header>
+
+    <div class="task-board">
+        <div class="column">
+            <h2>Backlog</h2>
+            <div class="card">
+                <h3>Nulla volutpat aliquam velit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag oz">OZ</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Facilisis in pretium nisl aliquet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag le">LE</span>
+                    <span class="due-date overdue">Two days ago</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Eget porttitor lorem</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag me">ME</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Todo</h2>
+            <div class="card">
+                <h3>Eget porttitor lorem</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag am">AM</span>
+                    <span class="due-date">Today</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Consectetur adipiscing elit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag oz">OZ</span>
+                    <span class="due-date future">In three days</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Nulla volutpat aliquam velit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag le">LE</span>
+                    <span class="due-date future">July 21</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Done</h2>
+            <div class="card">
+                <h3>Ac tristique libero volutpat at</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag le">LE</span>
+                    <span class="due-date">A week ago</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Phasellus iaculis neque</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag oz">OZ</span>
+                    <span class="due-date">Last Tuesday</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Facilisis in pretium nisl aliquet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat ar..</p>
+                <div class="meta">
+                    <span class="user-tag am">AM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
