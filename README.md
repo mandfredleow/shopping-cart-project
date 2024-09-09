@@ -31,11 +31,10 @@ This project contains two assignments.
 ## Assumptions
 
 1. **API Stability**: Assumed the provided API endpoints are stable and follow the documented structure.
-2. **Browser Support**: Developed with modern browsers in mind, assuming users have up-to-date browsers that support ES6+ features.
-3. **Performance**: Assumed the product list wouldn't grow to a size that would cause performance issues with the current implementation.
-4. **User Authentication**: The current implementation doesn't include user authentication, assuming it's not required for this phase of the project.
-5. **Static Webapge**: Assumed for assignment 1 that it's a static webpage without any dynamic content or functionality.
-6. **Product Information**: 
+2. **Performance**: Assumed the product list wouldn't grow to a size that would cause performance issues with the current implementation.
+3. **User Authentication**: The current implementation doesn't include user authentication, assuming it's not required for this phase of the project.
+4. **Static Webapge**: Assumed for assignment 1 that it's a static webpage without any dynamic content or functionality.
+5. **Product Information**: 
     - Products are splited into three categories: "Clothing (Men's and Women's)", "Jewelery", and "Electronics".
     - Products' details and specifications are similar for each product in the same category.
     - Only Clothing and Jewelery have "size" property.
