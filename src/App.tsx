@@ -7,7 +7,7 @@ import CartPage from './pages/CartPage';
 
 function App() {
   const [cartCount, setCartCount] = useState<number>(0);
-  const [cartItems, setCartItems] = useState<{ [key: string]: { quantity: number; size?: string } }>({}); // Updated to use a string key
+  const [cartItems, setCartItems] = useState<{ [key: string]: { quantity: number; size?: string } }>({}); 
   const [isCartLoaded, setIsCartLoaded] = useState(false);
 
   // Function to update cart count
@@ -47,7 +47,7 @@ function App() {
   // Function to add items to the cart
   const addToCart = (productId: number, quantity: number = 1, size?: string) => {
     setCartItems((prevItems) => {
-      const key = size ? `${productId}-${size}` : `${productId}`; // Updated to handle size parameter
+      const key = size ? `${productId}-${size}` : `${productId}`; 
       const updatedItems = { 
         ...prevItems, 
         [key]: { 
