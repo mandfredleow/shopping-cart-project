@@ -226,7 +226,7 @@ export default function CartPage({ cartItems, setCartItems }: CartPageProps) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-4 space-y-2"> {/* Added space-y-6 */}
+                            <div className="mt-4 space-y-2">
                                 <Button
                                     variant="contained"
                                     className="w-full bg-blue-500 hover:bg-blue-600 text-white"
