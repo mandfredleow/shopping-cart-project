@@ -46,6 +46,23 @@ This project contains two assignments.
 3. Add unit and integration tests to ensure reliability as the application grows.
 4. Evaluate the need for a more robust state management solution if the application's complexity increases significantly.
 
+# Before running the Assignments
+
+Must sure to clone this repository
+
+Before running the React project, you need to ensure that you have the following installed and set up:
+1. Node.js
+2. npm
+    - Node.js: React projects require Node.js to run the development server and build tools.
+    - npm (Node Package Manager): npm comes with Node.js and is used to install project dependencies.
+  
+You can install Node.js from the offical website ( https://nodejs.org/en ). After installing, you can verify the installation by running the following command in your terminal:
+```
+node -v
+npm -v
+```
+This will show you the installed version of Node.js and npm
+
 # To run Assingment 1 
 
 ### Option 1: Open directly in browser
