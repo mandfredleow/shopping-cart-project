@@ -19,7 +19,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
   return (
     <div
-      className="relative border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105 flex flex-col justify-between h-[450px]" // Increase height
+      className="relative border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105 flex flex-col justify-between h-[450px]" 
       onClick={onClick}
     >
       {/* Product Image*/}
@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`h-4 w-4 ${i < Math.round(product.rating.rate) ? 'text-yellow-500' : 'text-gray-300'}`} // Smaller star size
+                  className={`h-4 w-4 ${i < Math.round(product.rating.rate) ? 'text-yellow-500' : 'text-gray-300'}`} 
                 />
               ))}
             </div>
